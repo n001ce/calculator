@@ -37,13 +37,16 @@ input{
 }
 
 #btn{
-    background-color: rgba(164, 164, 168, 0.384);
+    background-color: rgba(235, 235, 235, 0.637);
     border-style: none;
 
 }
 
 #result{
-    background-color:rgba(190, 190, 190, 0.555)
+    background-color:rgba(190, 190, 190, 0.199);
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
 #res_header{
     font-size: .7em;
@@ -58,4 +61,22 @@ input{
     background-color:rgba(206, 194, 194, 0.151);
     margin: 10px;
     font-size: .9em;
+}
+
+#number{
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    font-size: 2em;
+}
+
+#num_row{
+    
+    padding: 10px;
+    color: rgba(255, 255, 255, 0.836);
+    background-color: rgba(2, 29, 2, 0.548);
+}
+
+#error{
+    color: red;
 }
