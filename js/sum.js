@@ -4,6 +4,7 @@ const calc2 = document.getElementById("calc2");
 const sq = document.getElementById("sq");
 const res=document.getElementById("result");
 const rHead=document.getElementById("res_header")
+const uInput = document.getElementById("uInput")
 let userOp = "";
 
 let nums=[];
@@ -22,6 +23,7 @@ const uraperv = [
 
 function startup(){
     res.style.display = "none"
+    uInput.style.display = "none"
     
 }
 
@@ -118,22 +120,35 @@ function calc2O(value1){
 function reset(){
     result = 0;
     document.getElementById("uInput").value = "";
+    rHead.value= "";
 }
 
 
 function selectOp(e){
     userOp = e;
-    if(userOp === "sum"){
+    if(userOp == "empty"){
+        startup()
+    }
+    else if(userOp === "sum"){
         reset()
         rHead.innerHTML = "Enter an array of integers"
+        res.style.display = "none"
+        uInput.style.display="block"
     }else if(userOp==="calc"){
         reset()
         rHead.innerHTML = "Enter in an operation with + or -"
+        uInput.style.display ="block"
+        res.style.display = "none"
     }else if(userOp==="calc2"){
         reset()
         rHead.innerHTML = "Enter in multiple operations with +, -, /, or * followed by ; to close"
+        uInput.style.display ="block"
+        res.style.display="none"
+
     }else{
         rHead.innerHTML = "Enter in multiple operations with + , - , / , * , or ^ followed by l to close"
+        uInput.style.display ="block"
+        res.style.display="none"
     }
 }
 
