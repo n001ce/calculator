@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css" rel="stylesheet">
+    <title>Document</title>
+    
+</head>
+<body onpageshow="startup()">
+    <div class="container h-200">
+        <div class="row h-100 justify-content-center align-items-center">
+            <div class="box">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <label class="input-group-text" for="inputGroupSelect01">Operations</label>
+                    </div>
+                    <select onchange="selectOp(this.value)"class="custom-select" id="inputGroupSelect01">
+                      <option selected>Choose...</option>
+                      <option value="sum">Sum of Array</option>
+                      <option value="calc">Calculator</option>
+                      <option value="calc2">Calculator 2.0</option>
+                      <!-- <option value="sq">Square</option> -->
+                    </select>
+                  </div>
+                  <h2 id="option_header"></h2>
+                  <div id="input_select" >
+                    <h1 id="res_header"></h1>
+                    <input type="text" id="uInput">
+                    <button id="btn" type="button" onclick="calculate()" class="btn btn-outline-secondary">Run operation</button>
+                  </div>
+            </div> 
+        </div>
+        <div class="row h-100 justify-content-center align-items-center">
+            <div class="box" id="result">
+                <div id="result"></div>
+            </div>
+            <img src="" alt="">
+        </div>
+    </div>
+</body>
+<script src="sum.js"></script>
+</html>
